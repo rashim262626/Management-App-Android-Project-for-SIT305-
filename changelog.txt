@@ -11,4 +11,5 @@ Set up Microsoft Teams group (1.5 hours) [Thavin]
 Week 3, Thursday 21/03/19
 Project Initialized (6 hours) [Rashim]
 
-
+Week 3, Thursday 22/03/19 - 24/03/19
+Development of Main class (6 hours) [Thavin]
