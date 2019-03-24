@@ -1,0 +1,14 @@
+Week 3, Tuesday 19/03/19
+Discussed the project details, requirements, tools required, our roles,
+expectations, after being allocated in a team by Henry with each other.
+(3 hours) [Thavin, Rashim]
+Created Git Repository (1.5 hours) [Rashim]
+Added Thavin + Henry to repository [Rashim]
+
+Week 3, Wednesday 20/03/19
+Set up Microsoft Teams group (1.5 hours) [Thavin] 
+
+Week 3, Thursday 21/03/19
+Project Initialized (6 hours) [Rashim]
+
+
