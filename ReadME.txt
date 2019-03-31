@@ -8,6 +8,6 @@ We will further add more features as the works goes on.
 GitHub Link to our repository is :-
 https://github.com/rashim262626/Management-App-Android-Project-for-SIT305-.git
 
-Our details are as follow:-
+Our (Developers) details are as follow:-
 Rashim Kumar (215282423)
 Thavin (213401504)

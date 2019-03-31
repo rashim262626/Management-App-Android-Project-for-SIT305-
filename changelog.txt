@@ -9,7 +9,20 @@ Week 3, Wednesday 20/03/19
 Set up Microsoft Teams group (1.5 hours) [Thavin] 
 
 Week 3, Thursday 21/03/19
-Project Initialized (6 hours) [Rashim]
+Project Initialized. I made a folder and initialized my project through terminal.
+I made sure every dependency was installed in my project. (6 hours) [Rashim]
 
 Week 3, Thursday 22/03/19 - 24/03/19
 Development of Main class (6 hours) [Thavin]
+
+Week 4, Wednesday  27/03/19
+Created 2 files (components).
+A user sign in screen and sign up screen for user authentication (6 hours) [Rashim]
+
+Week 4, Thursday 28/03/19
+On Campus group meeting at Burwood to further plan and assign tasks accordingly,
+to discuss any doubts/questions, to be on track to complete the project before time. 
+(3 hours) [Thavin, Rashim] 
+
+Week 4, Sunday 31/03/19
+Worked a bit more on user sign in and sign up screens (2 hours) [Rashim]
