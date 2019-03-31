@@ -26,3 +26,12 @@ to discuss any doubts/questions, to be on track to complete the project before t
 
 Week 4, Sunday 31/03/19
 Worked a bit more on user sign in and sign up screens (2 hours) [Rashim]
+
+Week 4, Wednesday  27/03/19
+Developed splash screens (2 hours) [Thavin]
+
+Week 4, Friday  29/03/19
+Worked on sign in and sign up screens front end design (4 hours) [Thavin]
+
+Week 4, Sunday 31/03/19
+Developed home screen (2 hours) [Thavin]
