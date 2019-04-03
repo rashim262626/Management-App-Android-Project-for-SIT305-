@@ -5,9 +5,16 @@ const { height, width } = Dimensions.get('screen');
 
 class CustomButton extends Component {
 
+    onButtonPressHandle = () => {
+        this.props.onPress;
+    }
+
     render() {
         return (
-            <TouchableOpacity style={styles.containerStyle} >
+            <TouchableOpacity 
+                style={styles.containerStyle} 
+                onPress={this.props.onPress}
+            >
                 <Text style={styles.TextStyle} >
                     {this.props.text}
                 </Text>

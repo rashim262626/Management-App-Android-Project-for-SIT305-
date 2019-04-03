@@ -13,6 +13,10 @@ class SignUpScreen extends Component {
     };
   }
 
+  static navigationOptions = {
+    header: null
+  };
+
   render() {
     return (
       <View style={styles.MainContainerStyle} >
@@ -34,6 +38,7 @@ class SignUpScreen extends Component {
 
         <CustomButton
           text="Sign Up"
+          onPress={() => this.props.navigation.navigate('Home')}
         />
 
       </View>

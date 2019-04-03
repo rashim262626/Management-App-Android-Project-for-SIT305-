@@ -4,15 +4,15 @@ import { TextInput, StyleSheet, Dimensions } from 'react-native';
 const { height, width } = Dimensions.get('screen');
 
 class Input extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-  }
 
   render() {
     return (
-      <TextInput style={styles.containerStyle} placeholder={this.props.placeholder}>
+      <TextInput 
+        style={styles.containerStyle}
+        {...this.props}
+        //placeholder={this.props.placeholder} 
+        //label={this.props.label}
+      >
       </TextInput>
     );
   }
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
         width: .9 * width,
         height: .08 * height,
         backgroundColor: '#DFDAD8',
-        borderRadius: 15,
+        borderRadius: 12,
         textAlign: 'center',
         alignItems: 'center',
         justifyContent: 'center',
