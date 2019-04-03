@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet,  } from 'react-native';
+import { View, StyleSheet, Button } from 'react-native';
 import Logo from '../components/Logo';
 import CustomButton from '../components/CustomButton';
 import Input from '../components/Input';
@@ -11,6 +11,14 @@ class SignInScreen extends Component {
     super(props);
     this.state = {
     };
+  }
+
+  static navigationOptions = {
+    header: null
+  };
+
+  handleNav() {
+    this.props.navigation.navigate('Home');
   }
 
   render() {
@@ -34,8 +42,10 @@ class SignInScreen extends Component {
 
         <CustomButton
           text="Sign In"
+          onPress={() => this.props.navigation.navigate('Home')}
         />
       
+        
 
       </View>
     );

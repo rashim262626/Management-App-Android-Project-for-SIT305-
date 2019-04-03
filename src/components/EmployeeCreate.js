@@ -7,12 +7,40 @@ class EmployeeCreate extends Component {
      
     constructor(props) {
         super(props);
-        this.state = { pickerValue: "Monday" };
+        this.state = { 
+            pickerValue: "Monday",
+            name: '',
+            phone: '',
+            shift: 'Monday'
+            //totalEmployees: 0
+        };
     }
 
-    handleChangeDayState = (value) => {
-        this.setState({ pickerValue: value });
+    onCreateButtonPress() {
+        
     }
+
+    static navigationOptions = {
+        header: null
+      };
+
+    // handleChangeDayState = (value) => {
+    //     this.setState({ pickerValue: value });
+    // }
+
+    // renderEmployees = () => {
+    //     if(totalEmployees > 0) {
+    //         return;
+    //     }
+
+    //     return (
+    //         <View style={styles.instructionViewStyle} >
+    //             <Text style={styles.instructionTextStyle} >
+    //                 Add employees by pressing Add button
+    //             </Text>
+    //         </View>
+    //     );
+    // }
 
   render() {
     return (
@@ -26,15 +54,20 @@ class EmployeeCreate extends Component {
                     <Input
                         label="Name"
                         placeholder="Jane"
+                        value={this.state.name}
+                        onChangeText={(name) => this.setState({name})}
                     />
                     <Input
                         label="Phone"
                         placeholder="555-555-5555"
+                        value={this.state.phone}
+                        onChangeText={(phone) => this.setState({phone})}
                     />
                     <Picker
-                        selectedValue={this.state.pickerValue}
-                        onValueChange={this.handleChangeDayState.bind(this)}
-                        style={{marginBottom: 30}}
+                        selectedValue={this.state.shift}
+                        //onValueChange={this.handleChangeDayState.bind(this)}
+                        onValueChange={(shift) => this.setState({shift})}
+                        style={{marginBottom: 5}}
                     >
                         <Picker.Item label="Monday" value="Monday" />
                         <Picker.Item label="Tuesday" value="Tuesday" />
@@ -47,6 +80,7 @@ class EmployeeCreate extends Component {
 
                     <Button
                         text="Create" 
+                        onPress={() => alert(this.state.phone)}
                     />
                 </View>
             </View>
@@ -75,10 +109,19 @@ const styles = StyleSheet.create({
         //padding: 10,
     },
     componentViewStyle: {
-        height: 600,
+        height: 550,
         justifyContent: 'space-around',
         //marginBottom: 40,
-    }
+    },
+    // instructionViewStyle: {
+    //     width: '100%',
+    //     height: 200,
+    //     justifyContent: 'center',
+    //     alignItems: 'center'
+    // },
+    // instructionTextStyle: {
+    //     fontSize: 15,
+    // }
 });
 
 export default EmployeeCreate;

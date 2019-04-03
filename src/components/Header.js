@@ -13,7 +13,10 @@ class Header extends Component {
       <View style={styles.headerStyle} >
         <View />
         <Text style={styles.headerTextStyle} >Employees</Text>
-        <TouchableOpacity style={{paddingRight:7}} >
+        <TouchableOpacity 
+            style={{paddingRight:7}} 
+            onPress={this.props.onPress}
+        >
             <Text style={styles.headerTextStyle} >Add</Text>
         </TouchableOpacity>
       </View>

@@ -41,3 +41,8 @@ Added next screen to home screen which is “create employee/Add emolyee” (3 hours
 Week 5, Wednesday 03/04/19
 Added Navigation to our app, so now it is now navigating from one page to another (4 hours) [Rashim]
 
+Week 5, Tuesday 02/04/19
+Minor changes to front end designs (2 hours) [Thavin]
+
+Week 5, Wednesday 03/04/19
+Completed Front end design for current screens (6 hours) [Thavin]
