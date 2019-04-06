@@ -46,3 +46,12 @@ Minor changes to front end designs (2 hours) [Thavin]
 
 Week 5, Wednesday 03/04/19
 Completed Front end design for current screens (6 hours) [Thavin]
+
+Week 5, Friday 05/04/19
+On Campus group meeting at Burwood to further plan and assign tasks accordingly,
+to discuss any doubts/questions, to be on track to complete the project before time. 
+(2 hours) [Thavin, Rashim]
+
+Week 5, Sunday 07/04/19
+I worked on adding Firebase authentication into our app, 
+which will be sign in and sign up method for users (5 hours) [Rashim]
