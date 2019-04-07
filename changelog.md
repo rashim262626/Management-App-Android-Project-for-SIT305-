@@ -18,10 +18,14 @@ Week 4, Friday 29/03/19 Worked on sign in and sign up screens front end design (
 
 Week 4, Sunday 31/03/19 Developed home screen (2 hours) [Thavin]
 
-Week 5, Monday 01/04/19 Added next screen to home screen which is ìcreate employee/Add emolyeeî (3 hours) [Rashim]
+Week 5, Monday 01/04/19 Added next screen to home screen which is ‚Äúcreate employee/Add emolyee‚Äù (3 hours) [Rashim]
 
 Week 5, Wednesday 03/04/19 Added Navigation to our app, so now it is now navigating from one page to another (4 hours) [Rashim]
 
 Week 5, Tuesday 02/04/19 Minor changes to front end designs (2 hours) [Thavin]
 
 Week 5, Wednesday 03/04/19 Completed Front end design for current screens (6 hours) [Thavin]
+
+Week 6, Monday 08/04/19 [Henry]
+- Great to see this progressing.
+- Both of you: function comments. I made a big fuss about this on the unit site last week. [Henry]
