@@ -9,9 +9,10 @@ class Input extends Component {
     return (
       <TextInput 
         style={styles.containerStyle}
+        placeholder={this.props.placeholder} 
+        onChangeText={this.props.onChange}
+        value={this.props.value}
         {...this.props}
-        //placeholder={this.props.placeholder} 
-        //label={this.props.label}
       >
       </TextInput>
     );

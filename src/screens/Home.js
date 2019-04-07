@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, } from 'react-native';
+import firebase from 'firebase';
 import Header from '../components/Header';
+import Button from '../components/CustomButton';
 
 class Home extends Component {
   constructor(props) {
@@ -13,9 +15,18 @@ class Home extends Component {
     };
   }
 
-  static navigationOptions = {
-    header: null
-  };
+    static navigationOptions = {
+        header: null
+    };
+
+    onLogoutButtonPress = async () => {
+        try {
+            await firebase.auth().signOut();
+            this.props.navigation.navigate('SignInScreen');
+        } catch (e) {
+            console.log(e);
+        }
+    }
 
     renderEmployees() {
         if(this.state.totalEmployees > 0) {
@@ -44,6 +55,13 @@ class Home extends Component {
             </View>
             
             {this.renderEmployees()}
+
+            <View style={{alignItems: 'center'}} >
+                <Button 
+                    text="Log Out"
+                    onPress={() => this.onLogoutButtonPress()}
+                />
+            </View>
             
         </View>
     );

@@ -1,7 +1,32 @@
 import React, { Component } from 'react';
+import firebase from 'firebase';
 import { View, Text, ActivityIndicator, StyleSheet } from 'react-native';
 
 class Loading extends Component {
+
+    static navigationOptions = {
+        header: null
+    };
+
+    componentWillMount() {
+
+        firebase.initializeApp({
+            apiKey: "AIzaSyCZjnwQKgr7lMoejMmhrSCodBIuCyatL7I",
+            authDomain: "managerapp-e90c3.firebaseapp.com",
+            databaseURL: "https://managerapp-e90c3.firebaseio.com",
+            projectId: "managerapp-e90c3",
+            storageBucket: "managerapp-e90c3.appspot.com",
+            messagingSenderId: "141175744105"
+        });
+
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                this.props.navigation.navigate('Home');
+            } else {
+                this.props.navigation.navigate('SignInScreen');
+            }
+        });
+    }
 
     render() {
         return (
