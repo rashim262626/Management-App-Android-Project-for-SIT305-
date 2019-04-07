@@ -55,3 +55,6 @@ to discuss any doubts/questions, to be on track to complete the project before t
 Week 5, Sunday 07/04/19
 I worked on adding Firebase authentication into our app, 
 which will be sign in and sign up method for users (5 hours) [Rashim]
+
+Week 5, Sunday 07/04/19
+Worked on authentication with Rashim to complete this function. (5 hours) [Thavin]
