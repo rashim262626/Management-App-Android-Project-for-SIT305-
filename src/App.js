@@ -17,7 +17,7 @@ import CreateEmployee from './components/EmployeeCreate';
 
 const MainNavigator = createStackNavigator({
   //Splash: {screen: Splash},
-  //Loading: {screen: Loading},
+  Loading: {screen: Loading},
   SignInScreen: {screen: SignInScreen},
   SignUpScreen: {screen: SignUpScreen},
   Home: {screen: Home},

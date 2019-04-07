@@ -16,13 +16,12 @@ class EmployeeCreate extends Component {
         };
     }
 
-    onCreateButtonPress() {
-        
+    onCreateButtonPress() {  
     }
 
     static navigationOptions = {
         header: null
-      };
+    };
 
     // handleChangeDayState = (value) => {
     //     this.setState({ pickerValue: value });
@@ -32,7 +31,6 @@ class EmployeeCreate extends Component {
     //     if(totalEmployees > 0) {
     //         return;
     //     }
-
     //     return (
     //         <View style={styles.instructionViewStyle} >
     //             <Text style={styles.instructionTextStyle} >
@@ -84,10 +82,7 @@ class EmployeeCreate extends Component {
                     />
                 </View>
             </View>
-
         </View>
-
-        
     );
   }
 }
