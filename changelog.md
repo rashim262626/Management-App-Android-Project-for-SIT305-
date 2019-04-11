@@ -29,3 +29,8 @@ Week 5, Wednesday 03/04/19 Completed Front end design for current screens (6 hou
 Week 6, Monday 08/04/19 [Henry]
 - Great to see this progressing.
 - Both of you: function comments. I made a big fuss about this on the unit site last week. [Henry]
+
+Week 6, Thursday 11/04/19 [Henry]
+- The function comments are still missing [Henry]
+
+
