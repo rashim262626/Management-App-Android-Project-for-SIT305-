@@ -5,7 +5,9 @@ import Logo from '../components/Logo';
 import CustomButton from '../components/CustomButton';
 import Input from '../components/Input';
 
-
+/*
+Sign in screen Class
+*/
 class SignInScreen extends Component {
 
   constructor(props) {
@@ -19,6 +21,7 @@ class SignInScreen extends Component {
     header: null
   };
 
+  //Login button method
   onLoginButtonPress() {
 
     const { email, password } = this.state;
@@ -32,11 +35,13 @@ class SignInScreen extends Component {
     });
   }
 
+  //If login fail method
   onLoginFail() {
     this.setState({ error: 'Authentication Failed', loading: false });
     
   }
 
+  //If login is success method
   onLoginSuccess() {
     this.setState({
       email: '',
@@ -48,6 +53,7 @@ class SignInScreen extends Component {
     this.props.navigation.navigate('Home');
   }
 
+  //This method will either render login button or activity spinner
   renderButton() {
     if (this.state.loading) {
       return <ActivityIndicator size='large' />;
@@ -61,10 +67,12 @@ class SignInScreen extends Component {
     );
   }
 
+  //Method to navigate to home
   handleNav() {
     this.props.navigation.navigate('Home');
   }
 
+  //Render method to render things on screen. Default method
   render() {
     return (
       <View style={styles.MainContainerStyle} >
@@ -114,6 +122,7 @@ class SignInScreen extends Component {
   }
 }
 
+//Styling properties
 const styles = StyleSheet.create({
   MainContainerStyle: {
     flex: 1,
@@ -137,94 +146,3 @@ const styles = StyleSheet.create({
 });
 
 export default SignInScreen;
-
-// import React, { Component } from 'react';
-// import { Text } from 'react-native';
-// import firebase from 'firebase';
-// import { Button, Card, CardSection, Input, Spinner } from './common';
-
-// class LoginForm extends Component {
-//   state = { email: '', password: '', error: '', loading: false };
-
-//   onButtonPress() {
-//     const { email, password } = this.state;
-
-//     this.setState({ error: '', loading: true });
-
-//     firebase.auth().signInWithEmailAndPassword(email, password)
-//       .then(this.onLoginSuccess.bind(this))
-//       .catch(() => {
-//         firebase.auth().createUserWithEmailAndPassword(email, password)
-//           .then(this.onLoginSuccess.bind(this))
-//           .catch(this.onLoginFail.bind(this));
-//       });
-//   }
-
-//   onLoginFail() {
-//     this.setState({ error: 'Authentication Failed', loading: false });
-//   }
-
-//   onLoginSuccess() {
-//     this.setState({
-//       email: '',
-//       password: '',
-//       loading: false,
-//       error: ''
-//     });
-//   }
-
-//   renderButton() {
-//     if (this.state.loading) {
-//       return <Spinner size="small" />;
-//     }
-
-//     return (
-//       <Button onPress={this.onButtonPress.bind(this)}>
-//         Log in
-//       </Button>
-//     );
-//   }
-
-//   render() {
-//     return (
-//       <Card>
-//         <CardSection>
-//           <Input
-//             placeholder="user@gmail.com"
-//             label="Email"
-//             value={this.state.email}
-//             onChangeText={email => this.setState({ email })}
-//           />
-//         </CardSection>
-
-//         <CardSection>
-//           <Input
-//             secureTextEntry
-//             placeholder="password"
-//             label="Password"
-//             value={this.state.password}
-//             onChangeText={password => this.setState({ password })}
-//           />
-//         </CardSection>
-
-//         <Text style={styles.errorTextStyle}>
-//           {this.state.error}
-//         </Text>
-
-//         <CardSection>
-//           {this.renderButton()}
-//         </CardSection>
-//       </Card>
-//     );
-//   }
-// }
-
-// const styles = {
-//   errorTextStyle: {
-//     fontSize: 20,
-//     alignSelf: 'center',
-//     color: 'red'
-//   }
-// };
-
-// export default LoginForm;

@@ -3,6 +3,7 @@ import { TextInput, StyleSheet, Dimensions } from 'react-native';
 
 const { height, width } = Dimensions.get('screen');
 
+//Input class for making input fields.
 class Input extends Component {
 
   render() {
@@ -19,6 +20,7 @@ class Input extends Component {
   }
 }
 
+//Styling properties
 const styles = StyleSheet.create({
     containerStyle: {
         width: .9 * width,
