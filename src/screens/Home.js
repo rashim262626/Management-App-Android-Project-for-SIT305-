@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, } from 'react-native';
+import { View, Text, StyleSheet, ListView } from 'react-native';
+import ListItem from '../components/ListItem';
+import _ from 'lodash';
 import firebase from 'firebase';
 import Header from '../components/Header';
 import Button from '../components/CustomButton';
@@ -8,6 +10,7 @@ import Button from '../components/CustomButton';
     Home screen class. It will render when user sign in to app or create new
     email and then sign in to app.
 */
+
 class Home extends Component {
   constructor(props) {
     super(props);
@@ -16,12 +19,45 @@ class Home extends Component {
         name: '',
         phone: '',
         shift: '',
+        dataSource: new ListView.DataSource({
+            rowHasChanged: (row1, row2) => row1 !== row2,
+        })
     };
   }
 
     static navigationOptions = {
         header: null
     };
+
+    componentWillMount() {
+
+        this.EmployeesFetch();
+    }
+
+    EmployeesFetch = () => {
+
+        const { currentUser } = firebase.auth();
+        var db = firebase.database();
+        var ref = db.ref(`/users/${currentUser.uid}/employees/`);
+
+        ref.on('value', snapshot => {
+            this.ConvertToArray(snapshot.val());
+        });
+    }
+
+    ConvertToArray = (dataEmployee) => {
+
+        const employees = _.map(dataEmployee, (val, uid) => {
+            return { ...val, uid };
+        });
+
+        this.createDataSource({employees});
+    }
+
+    createDataSource({ employees }) {
+        this.setState({dataSource: this.state.dataSource.cloneWithRows(employees)});
+        //alert(this.state.dataSource.getRowCount());
+    }
 
     //Logout user method
     onLogoutButtonPress = async () => {
@@ -33,18 +69,25 @@ class Home extends Component {
         }
     }
 
+    renderRow(employee) {
+        return <ListItem 
+            employee={employee} 
+            //onPress={this.props.navigation.navigate("EmployeeEditForm")}
+            //naviprgation={this.props.navigation}
+        />
+    }
+
     //Rendering list of employees added
     renderEmployees() {
         if(this.state.totalEmployees > 0) {
             return(
                 <View style={styles.employeeContainerStyle} >
-                    <Text style={styles.employeeTextStyle}>Emplyee</Text>
-                    <Text style={styles.employeeTextStyle}>Emplyee</Text>
-                    <Text style={styles.employeeTextStyle}>Emplyee</Text>
-                    <Text style={styles.employeeTextStyle}>Emplyee</Text>
-                    <Text style={styles.employeeTextStyle}>Emplyee</Text>
-                    <Text style={styles.employeeTextStyle}>Emplyee</Text>
-                    <Text style={styles.employeeTextStyle}>Emplyee</Text>
+                   <ListView 
+                    enableEmptySections
+                    dataSource={this.state.dataSource}
+                    renderRow={this.renderRow}
+                    navigation={this.props.navigation}
+                   />
                 </View>
             );
         }
@@ -67,13 +110,13 @@ class Home extends Component {
 
             <View >
                 <Header 
-                    onPress={() => this.props.navigation.navigate("CreateEmployee")}
+                    onPress={() => this.props.navigation.navigate("EmployeeEditForm", {val:this.state.totalEmployees})}
                 />
             </View>
             
             {this.renderEmployees()}
 
-            <View style={{alignItems: 'center'}} >
+            <View style={{alignItems: 'center', marginBottom: 20}} >
                 <Button 
                     text="Log Out"
                     onPress={() => this.onLogoutButtonPress()}
@@ -102,7 +145,7 @@ const styles = StyleSheet.create({
         textAlign: 'center'
     },
     employeeContainerStyle: {
-        //flex: 1,
+        flex: 1,
         width: '95%',
         //marginTop: 20,
         marginVertical: '5%',

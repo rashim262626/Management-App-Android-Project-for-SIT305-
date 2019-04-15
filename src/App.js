@@ -5,6 +5,7 @@ import SignInScreen from './screens/SignInScreen';
 import SignUpScreen from './screens/SignUpScreen';
 import Home from './screens/Home';
 import CreateEmployee from './components/EmployeeCreate';
+import EmployeeEditForm from './components/EmployeeEditForm';
 
 //Defining navigation containing all screens of app
 const MainNavigator = createStackNavigator({
@@ -13,7 +14,8 @@ const MainNavigator = createStackNavigator({
   SignInScreen: {screen: SignInScreen},
   SignUpScreen: {screen: SignUpScreen},
   Home: {screen: Home},
-  CreateEmployee: {screen: CreateEmployee}
+  CreateEmployee: {screen: CreateEmployee},
+  EmployeeEditForm: {screen: EmployeeEditForm}
 });
 
 //Exporting it

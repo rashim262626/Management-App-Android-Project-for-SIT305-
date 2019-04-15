@@ -21,7 +21,7 @@ class Loading extends Component {
 
         firebase.auth().onAuthStateChanged((user) => {
             if (user) {
-                this.props.navigation.navigate('Home');
+               this.props.navigation.navigate('Home');
             } else {
                 this.props.navigation.navigate('SignInScreen');
             }
