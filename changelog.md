@@ -33,4 +33,7 @@ Week 6, Monday 08/04/19 [Henry]
 Week 6, Thursday 11/04/19 [Henry]
 - The function comments are still missing [Henry]
 
+Week 7, Monday 15/04/19 [Henry]
+- Feedback: What's happening with this project? Has this been cancelled? [Henry]
+
 
