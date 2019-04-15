@@ -5,7 +5,9 @@ import Logo from '../components/Logo';
 import CustomButton from '../components/CustomButton';
 import Input from '../components/Input';
 
-
+/*
+Sign up screen Class
+*/
 class SignUpScreen extends Component {
 
   constructor(props) {
@@ -19,22 +21,25 @@ class SignUpScreen extends Component {
     header: null
   };
   
+  //Sign-Up Button method
   onSignUpButtonPress() {
 
     const { email, password } = this.state;
-    //alert(password);
     this.setState({ error: '', loading: true });
 
+    //Firebase method to Create email address with email and password
     firebase.auth().createUserWithEmailAndPassword(email, password)
       .then(this.onSignUpSuccess.bind(this))
         .catch(this.onSignUpFail.bind(this));
   }
 
+  //If user fail to create new email
   onSignUpFail() {
     this.setState({ error: 'Authentication Failed', loading: false });
     
   }
 
+  //On sign up success method
   onSignUpSuccess() {
     this.setState({
       email: '',
@@ -46,6 +51,7 @@ class SignUpScreen extends Component {
     this.props.navigation.navigate('Home');
   }
 
+  //This method will render either button or activity spinner to show loading
   renderButton() {
     if (this.state.loading) {
       return <ActivityIndicator size='large' />;
@@ -59,7 +65,7 @@ class SignUpScreen extends Component {
     );
   }
 
-
+  //Render method to render components. Default method
   render() {
     return (
       <View style={styles.MainContainerStyle} >
@@ -114,6 +120,7 @@ class SignUpScreen extends Component {
   }
 }
 
+//Styling properties
 const styles = StyleSheet.create({
   MainContainerStyle: {
     flex: 1,

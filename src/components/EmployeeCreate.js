@@ -1,66 +1,90 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Picker } from 'react-native';
+import { View, Text, StyleSheet, Picker, Image, ActivityIndicator } from 'react-native';
 import Input from './Input';
 import Button from './CustomButton';
+import firebase from 'firebase';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 class EmployeeCreate extends Component {
      
     constructor(props) {
         super(props);
+
         this.state = { 
             pickerValue: "Monday",
             name: '',
             phone: '',
-            shift: 'Monday'
+            shift: 'Monday',
+            loading: false
             //totalEmployees: 0
         };
     }
 
-    onCreateButtonPress() {  
+    createEmployee = () => {  
+        
+        const { currentUser } = firebase.auth();
+        const { name, phone, shift } = this.state;
+
+        this.setState({loading: true});
+
+        firebase.database().ref(`/users/${currentUser.uid}/employees`)
+        .push({ name, phone, shift })
+        .then(() => this.props.navigation.navigate('Home'));
+    }
+
+    renderCreateButton() {
+        if(this.state.loading)
+        {
+            return <ActivityIndicator size='large' />;
+        }
+        return (
+            <Button
+                text="Create" 
+                onPress={this.createEmployee.bind(this)}
+            />
+        );
     }
 
     static navigationOptions = {
         header: null
     };
 
-    // handleChangeDayState = (value) => {
-    //     this.setState({ pickerValue: value });
-    // }
-
-    // renderEmployees = () => {
-    //     if(totalEmployees > 0) {
-    //         return;
-    //     }
-    //     return (
-    //         <View style={styles.instructionViewStyle} >
-    //             <Text style={styles.instructionTextStyle} >
-    //                 Add employees by pressing Add button
-    //             </Text>
-    //         </View>
-    //     );
-    // }
 
   render() {
     return (
         <View style={{flex: 1}} >
             <View style={styles.headerStyle} >
+                <TouchableOpacity
+                    onPress={() => this.props.navigation.navigate('Home')}
+                >
+                    <Image
+                        style={{ height: 25, width: 25, marginTop: 25 }}
+                        source={require('../resources/backArrow.png')} 
+                    />
+                </TouchableOpacity>
                 <Text style={styles.headerTextStyle} >Create Employee</Text>
+                <View />
             </View>
         
             <View style={{alignItems: 'center', marginTop: 50}} >
                 <View style={styles.componentViewStyle} >
+                    <Text style={styles.textStyle} >Name</Text>
                     <Input
                         label="Name"
                         placeholder="Jane"
+                        autoCorrect={false}
                         value={this.state.name}
                         onChangeText={(name) => this.setState({name})}
                     />
+                    <Text style={styles.textStyle}>Phone</Text>
                     <Input
                         label="Phone"
                         placeholder="555-555-5555"
                         value={this.state.phone}
+                        autoCorrect={false}
                         onChangeText={(phone) => this.setState({phone})}
                     />
+                    <Text style={styles.textStyle}>Day</Text>
                     <Picker
                         selectedValue={this.state.shift}
                         //onValueChange={this.handleChangeDayState.bind(this)}
@@ -75,11 +99,11 @@ class EmployeeCreate extends Component {
                         <Picker.Item label="Saturday" value="Saturday" />
                         <Picker.Item label="Sunday" value="Sunday" />
                     </Picker>
+                    
+                    <View>
+                        {this.renderCreateButton()}
+                    </View>
 
-                    <Button
-                        text="Create" 
-                        onPress={() => alert(this.state.phone)}
-                    />
                 </View>
             </View>
         </View>
@@ -108,15 +132,124 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         //marginBottom: 40,
     },
-    // instructionViewStyle: {
-    //     width: '100%',
-    //     height: 200,
-    //     justifyContent: 'center',
-    //     alignItems: 'center'
-    // },
-    // instructionTextStyle: {
-    //     fontSize: 15,
-    // }
+    textStyle: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        paddingTop: 10,
+    }
 });
 
 export default EmployeeCreate;
+
+// import React, { Component } from 'react';
+// import { View, Text, StyleSheet, Picker, Image, ActivityIndicator, TouchableOpacity } from 'react-native';
+// import Input from './Input';
+// import Button from './CustomButton';
+// import firebase from 'firebase';
+// import EmplyeeForm from './EmployeeForm';
+// //import { TouchableOpacity } from 'react-native-gesture-handler';
+
+// class EmployeeCreate extends Component {
+     
+//     constructor(props) {
+//         super(props);
+
+//         this.state = { 
+//             pickerValue: "Monday",
+//             name: '',
+//             phone: '',
+//             shift: 'Monday',
+//             loading: false
+//             //totalEmployees: 0
+//         };
+//     }
+
+//     createEmployee = () => {  
+
+//         const { currentUser } = firebase.auth();
+//         const { name, phone, shift } = this.state;
+
+//         this.setState({loading: true});
+
+//         firebase.database().ref(`/users/${currentUser.uid}/employees`)
+//         .push({ name, phone, shift })
+//         .then(() => this.props.navigation.navigate('Home'));
+//     }
+
+//     renderCreateButton() {
+//         if(this.state.loading)
+//         {
+//             return <ActivityIndicator size='large' />;
+//         }
+//         return (
+//             <Button
+//                 text="Create" 
+//                 onPress={this.createEmployee.bind(this)}
+//             />
+//         );
+//     }
+
+//     static navigationOptions = {
+//         header: null
+//     };
+
+
+//   render() {
+//     return (
+//         <View style={{flex: 1}} >
+//             <View style={styles.headerStyle} >
+//                 <TouchableOpacity
+//                     onPress={() => this.props.navigation.navigate('Home')}
+//                 >
+//                     <Image
+//                         style={{ height: 25, width: 25, marginTop: 25 }}
+//                         source={require('../resources/backArrow.png')} 
+//                     />
+//                 </TouchableOpacity>
+//                 <Text style={styles.headerTextStyle} >Create Employee</Text>
+//                 <View />
+//             </View>
+        
+//             <View style={{alignItems: 'center', marginTop: 50}} >
+
+//                 <EmplyeeForm {...this.props} />
+                    
+//                 <View>
+//                     {this.renderCreateButton()}
+//                 </View>
+//             </View>
+//         </View>
+//     );
+//   }
+// }
+
+// const styles = StyleSheet.create({
+//     headerStyle: {
+//         width: '100%',
+//         height: 100,
+//         backgroundColor: '#FB6637',
+//         flexDirection: 'row',
+//         justifyContent: 'space-around',
+//         alignItems: 'center' ,
+//     },
+//     headerTextStyle: {
+//         fontSize: 25,
+//         color: 'white',
+//         fontWeight: 'bold',
+//         marginTop: 25,
+//         //padding: 10,
+//     },
+//     componentViewStyle: {
+//         height: 550,
+//         justifyContent: 'space-around',
+//         //marginBottom: 40,
+//     },
+//     textStyle: {
+//         fontSize: 18,
+//         fontWeight: 'bold',
+//         paddingTop: 10,
+//     }
+// });
+
+// export default EmployeeCreate;
+
