@@ -58,3 +58,22 @@ which will be sign in and sign up method for users (5 hours) [Rashim]
 
 Week 5, Sunday 07/04/19
 Worked on authentication with Rashim to complete this function. (5 hours) [Thavin]
+
+Week 6, Thursday 11/04/19
+On Campus group meeting at Burwood to further plan,to discuss any doubts/questions, 
+to see the progress and identify any issues with the app, to discuss what further features can be added in our app. 
+(2 hours) [Thavin, Rashim]
+
+Week 6, Saturday 13/04/19
+Worked on saving data to firebase database so that user can create and save employees to database. 
+(5 hours) [Rashim]
+
+Week 6, Sunday 14/04/19
+Worked a bit more on saving data to firebase database,
+means now a user can successfully create and save employees to database. (4 hours) [Rashim]
+
+Week 6, Sunday 14/04/19
+Worked with function to allow viewing of saved employees. (4 hours) [Thavin]
+
+Week 6, Monday 15/04/19
+Continued development of function allowing retreival of employee details. (4 hours) [Thavin]

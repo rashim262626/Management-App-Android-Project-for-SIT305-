@@ -1,4 +1,4 @@
-Week 3, Tuesday 19/03/19 Discussed the project details, requirements, tools required, our roles, expectations, after being allocated in a team by Henry with each other. (3 hours) [Thavin, Rashim] Created Git Repository (1.5 hours) [Rashim] Added Thavin + Henry to repository [Rashim]
+﻿Week 3, Tuesday 19/03/19 Discussed the project details, requirements, tools required, our roles, expectations, after being allocated in a team by Henry with each other. (3 hours) [Thavin, Rashim] Created Git Repository (1.5 hours) [Rashim] Added Thavin + Henry to repository [Rashim]
 
 Week 3, Wednesday 20/03/19 Set up Microsoft Teams group (1.5 hours) [Thavin]
 
@@ -26,14 +26,46 @@ Week 5, Tuesday 02/04/19 Minor changes to front end designs (2 hours) [Thavin]
 
 Week 5, Wednesday 03/04/19 Completed Front end design for current screens (6 hours) [Thavin]
 
+Week 5, Friday 05/04/19
+On Campus group meeting at Burwood to further plan and assign tasks accordingly,
+to discuss any doubts/questions, to be on track to complete the project before time. 
+(2 hours) [Thavin, Rashim]
+
+Week 5, Sunday 07/04/19
+I worked on adding Firebase authentication into our app, 
+which will be sign in and sign up method for users (5 hours) [Rashim]
+
+Week 5, Sunday 07/04/19
+Worked on authentication with Rashim to complete this function. (5 hours) [Thavin]
+
+Week 6, Thursday 11/04/19
+On Campus group meeting at Burwood to further plan,to discuss any doubts/questions, 
+to see the progress and identify any issues with the app, to discuss what further features can be added in our app. 
+(2 hours) [Thavin, Rashim]
+
+Week 6, Saturday 13/04/19
+Worked on saving data to firebase database so that user can create and save employees to database. 
+(5 hours) [Rashim]
+
+Week 6, Sunday 14/04/19
+Worked a bit more on saving data to firebase database,
+means now a user can successfully create and save employees to database. (4 hours) [Rashim]
+
+Week 6, Sunday 14/04/19
+Worked with function to allow viewing of saved employees. (4 hours) [Thavin]
+
+Week 6, Monday 15/04/19
+Continued development of function allowing retreival of employee details. (4 hours) [Thavin]
+
 Week 6, Monday 08/04/19 [Henry]
 - Great to see this progressing.
 - Both of you: function comments. I made a big fuss about this on the unit site last week. [Henry]
+-We have been updating our changes in the changelog.txt i have updated this file with the latest information. We will continue to keep both files up to date. [Thavin]
 
 Week 6, Thursday 11/04/19 [Henry]
 - The function comments are still missing [Henry]
 
 Week 7, Monday 15/04/19 [Henry]
 - Feedback: What's happening with this project? Has this been cancelled? [Henry]
-
+-The project has not been cancelled apologies for the late push this week. Due to the functions we developed this week it took slightly longer than we expected. [Thavin]
 
