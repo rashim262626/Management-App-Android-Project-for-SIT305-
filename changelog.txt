@@ -75,5 +75,20 @@ means now a user can successfully create and save employees to database. (4 hour
 Week 6, Sunday 14/04/19
 Worked with function to allow viewing of saved employees. (4 hours) [Thavin]
 
-Week 6, Monday 15/04/19
+Week 7, Monday 15/04/19
 Continued development of function allowing retreival of employee details. (4 hours) [Thavin]
+
+Week 7, Wednesday 17/04/19
+On Campus group meeting at Burwood to discuss tasks left, to discuss any doubts/questions, 
+to see the progress and identify any issues with the app, to discuss what further features can be added in our app.
+(2 hours) [Rashim, Thavin]
+
+Week 8, Friday 03/05/19
+Worked on how a user can edit details of employees and further update it with the new details. (5 hours) [Rashim]
+
+Week 8, Saturday 04/05/19
+Worked a bit more on how a user can update the details of employees with new details. (4 hours) [Rashim]
+
+
+
+
