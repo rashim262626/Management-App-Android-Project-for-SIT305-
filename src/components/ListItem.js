@@ -11,14 +11,16 @@ class ListItem extends Component {
 
   onRowPress() {
     //this.props.onPress;
-    this.props.navigation.navigate("EmployeeEditForm", {employee: this.props.employee});
+    //this.props.navigation.navigate("EmployeeEditForm", {employee: this.props.employee});
+    this.props.navigation.navigate("EmployeeEditForm");
   }
 
   render() {
-      const { name } = this.props.employee;
+    
+    const { name } = this.props.employee;
     return (
       <TouchableOpacity
-        onPress={this.onRowPress.bind(this)}
+        onPress={() => alert('clicked')}
       >
         <CardSection>
           <Text style={styles.employeeNameStyle} >{name}</Text>

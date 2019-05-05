@@ -27,19 +27,15 @@ class EmployeeEditForm extends Component {
 
     componentWillMount() {
 
-        const {name, phone, shift, uid} = this.props.navigation.getParam('employee');
-        this.setState({
+        const {name, phone, shift, uid} = this.props.navigation.getParam('item');
+        //alert(shift);
+         this.setState({
             name: name,
             phone: phone,
             shift: shift,
             uid: uid
         });
 
-        //--Other trick
-        _.each(this.props.navigation.getParam('employee'), (value, prop) => {
-            //-- can setstate or assign something over here
-            // prop is for uid
-        })
     }
 
     saveEmployee = () => {  
@@ -67,7 +63,7 @@ class EmployeeEditForm extends Component {
             this.setState({showModal: false});
             //Also navigate back to home screen
         })
-        //.then(() => this.props.navigation.navigate('Home'));
+        .then(() => this.props.navigation.navigate('Home'));
     }
 
     renderCreateButton() {
@@ -76,10 +72,19 @@ class EmployeeEditForm extends Component {
             return <ActivityIndicator size='large' />;
         }
         return (
-            <Button
-                text="Save" 
-                onPress={this.saveEmployee.bind(this)}
-            />
+            <View style={{height: 200, justifyContent: 'space-around'}}>
+                <Button
+                    text="Save" 
+                    onPress={this.saveEmployee.bind(this)}
+                />
+            {/* </View> */}
+
+            {/* <View> */}
+                <Button
+                    text="Delete" 
+                    onPress={this.deleteEmployee.bind(this)}
+                />
+            </View>
             
         );
     }
@@ -157,16 +162,16 @@ class EmployeeEditForm extends Component {
                         <Picker.Item label="Sunday" value="Sunday" />
                     </Picker>
                     
-                    <View style={{marginBottom: 15}}>
+                    {/* <View style={{marginBottom: 15}}> */}
                         {this.renderCreateButton()}
-                    </View>
+                    {/* </View> */}
 
-                    <View>
+                    {/* <View>
                         <Button
                             text="Delete" 
                             onPress={this.deleteEmployee.bind(this)}
                         />
-                    </View>
+                    </View> */}
 
                 </View>
             </View>
