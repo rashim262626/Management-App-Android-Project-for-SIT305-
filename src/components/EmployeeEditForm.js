@@ -1,9 +1,19 @@
 import React, { Component } from 'react';
+<<<<<<< HEAD
 import { View, Text, StyleSheet, Picker, Image, ActivityIndicator } from 'react-native';
 import Input from './Input';
 import Button from './CustomButton';
 import firebase from 'firebase';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+=======
+import { View, Text, StyleSheet, Picker, Image, ActivityIndicator, TouchableOpacity } from 'react-native';
+import _ from 'lodash';
+import Input from './Input';
+import Button from './CustomButton';
+import firebase from 'firebase';
+import DeletemModal from './DeleteModal'
+import DeleteModal from './DeleteModal';
+>>>>>>> Project-Initialization
 
 class EmployeeEditForm extends Component {
      
@@ -15,7 +25,13 @@ class EmployeeEditForm extends Component {
             name: '',
             phone: '',
             shift: 'Monday',
+<<<<<<< HEAD
             loading: false
+=======
+            loading: false,
+            uid: '',
+            showModal: false
+>>>>>>> Project-Initialization
             //totalEmployees: 0
         };
     }
@@ -23,6 +39,7 @@ class EmployeeEditForm extends Component {
 
     componentWillMount() {
 
+<<<<<<< HEAD
         const {name, phone, shift} = this.props.navigation.getParam('employee');
         this.setState({
             name: name,
@@ -40,17 +57,53 @@ class EmployeeEditForm extends Component {
 
         firebase.database().ref(`/users/${currentUser.uid}/employees`)
         .push({ name, phone, shift })
+=======
+        const {name, phone, shift, uid} = this.props.navigation.getParam('item');
+        //alert(shift);
+         this.setState({
+            name: name,
+            phone: phone,
+            shift: shift,
+            uid: uid
+        });
+
+    }
+
+    saveEmployee = () => {  
+        
+        const { currentUser } = firebase.auth();
+        const { name, phone, shift, uid } = this.state;
+
+        this.setState({loading: true});
+
+        firebase.database().ref(`/users/${currentUser.uid}/employees/${uid}`)
+        .set({ name, phone, shift })
+>>>>>>> Project-Initialization
         .then(() => this.props.navigation.navigate('Home'));
     }
 
     deleteEmployee = () => {
         const { currentUser } = firebase.auth();
+<<<<<<< HEAD
         const { name, phone, shift } = this.state;
 
         this.setState({loading: true});
 
         firebase.database().ref(`/users/${currentUser.uid}/employees`)
         .push({ name, phone, shift })
+=======
+        const { uid } = this.state;
+
+        this.setState({loading: true});
+
+        firebase.database().ref(`/users/${currentUser.uid}/employees/${uid}`)
+        .remove(() => {
+            //Show a Modal asking "Are you sure you want to delete user or not ?
+            //Make a new component in other file of modal
+            this.setState({showModal: false});
+            //Also navigate back to home screen
+        })
+>>>>>>> Project-Initialization
         .then(() => this.props.navigation.navigate('Home'));
     }
 
@@ -60,14 +113,52 @@ class EmployeeEditForm extends Component {
             return <ActivityIndicator size='large' />;
         }
         return (
+<<<<<<< HEAD
             <Button
                 text="Save" 
                 onPress={this.createEmployee.bind(this)}
             />
+=======
+            <View style={{height: 200, justifyContent: 'space-around'}}>
+                <Button
+                    text="Save" 
+                    onPress={this.saveEmployee.bind(this)}
+                />
+            {/* </View> */}
+
+            {/* <View> */}
+                <Button
+                    text="Delete" 
+                    onPress={this.deleteEmployee.bind(this)}
+                />
+            </View>
+>>>>>>> Project-Initialization
             
         );
     }
 
+<<<<<<< HEAD
+=======
+    //------------------Render it somewhere in Render Method------//
+    showDeleteModal() {
+        if(this.state.showModal)
+        {
+            return <DeleteModal 
+            onAccept={() => this.onAcceptDelete} 
+            onReject={() => this.onRejectDelete}
+            />
+        }
+    }
+
+    onAcceptDelete() {
+        this.deleteEmployee();
+    }
+
+    onRejectDelete() {
+        this.setState({showModal: false});
+    }
+
+>>>>>>> Project-Initialization
     static navigationOptions = {
         header: null
     };
@@ -122,6 +213,7 @@ class EmployeeEditForm extends Component {
                         <Picker.Item label="Sunday" value="Sunday" />
                     </Picker>
                     
+<<<<<<< HEAD
                     <View style={{marginBottom: 15}}>
                         {this.renderCreateButton()}
                     </View>
@@ -132,6 +224,18 @@ class EmployeeEditForm extends Component {
                             onPress={this.createEmployee.bind(this)}
                         />
                     </View>
+=======
+                    {/* <View style={{marginBottom: 15}}> */}
+                        {this.renderCreateButton()}
+                    {/* </View> */}
+
+                    {/* <View>
+                        <Button
+                            text="Delete" 
+                            onPress={this.deleteEmployee.bind(this)}
+                        />
+                    </View> */}
+>>>>>>> Project-Initialization
 
                 </View>
             </View>

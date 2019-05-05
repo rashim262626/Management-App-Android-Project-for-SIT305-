@@ -57,6 +57,20 @@ Worked with function to allow viewing of saved employees. (4 hours) [Thavin]
 Week 6, Monday 15/04/19
 Continued development of function allowing retreival of employee details. (4 hours) [Thavin]
 
+Week 7, Wednesday 17/04/19
+On Campus group meeting at Burwood to discuss tasks left, to discuss any doubts/questions, 
+to see the progress and identify any issues with the app, to discuss what further features can be added in our app.
+(2 hours) [Rashim, Thavin]
+
+Week 8, Friday 03/05/19
+Worked on how a user can edit details of employees and further update it with the new details. (5 hours) [Rashim]
+
+Week 8, Saturday 04/05/19
+Worked a bit more on how a user can update the details of employees with new details. (4 hours) [Rashim]
+
+Week 8, Saturday 04/05/19
+Finalising development of core functions. Add, edit and delete users. Data can be saved and retreived from the database. (8 hours) [Thavin]
+
 Week 6, Monday 08/04/19 [Henry]
 - Great to see this progressing.
 - Both of you: function comments. I made a big fuss about this on the unit site last week. [Henry]
@@ -64,8 +78,8 @@ Week 6, Monday 08/04/19 [Henry]
 
 Week 6, Thursday 11/04/19 [Henry]
 - The function comments are still missing [Henry]
+- We have updated our comments with functions we worked on. [Thavin]
 
 Week 7, Monday 15/04/19 [Henry]
 - Feedback: What's happening with this project? Has this been cancelled? [Henry]
 -The project has not been cancelled apologies for the late push this week. Due to the functions we developed this week it took slightly longer than we expected. [Thavin]
-
