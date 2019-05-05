@@ -89,5 +89,5 @@ Worked on how a user can edit details of employees and further update it with th
 Week 8, Saturday 04/05/19
 Worked a bit more on how a user can update the details of employees with new details. (4 hours) [Rashim]
 
-Week 8, Saturday 04/05/19
+Week 8, Sunday 05/05/19
 Finalising development of core functions. Add, edit and delete users. Data can be saved and retreived from the database. (8 hours) [Thavin]
