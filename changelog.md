@@ -38,10 +38,19 @@ which will be sign in and sign up method for users (5 hours) [Rashim]
 Week 5, Sunday 07/04/19
 Worked on authentication with Rashim to complete this function. (5 hours) [Thavin]
 
+Week 6, Monday 08/04/19 [Henry]
+- Great to see this progressing.
+- Both of you: function comments. I made a big fuss about this on the unit site last week. [Henry]
+-We have been updating our changes in the changelog.txt i have updated this file with the latest information. We will continue to keep both files up to date. [Thavin]
+
 Week 6, Thursday 11/04/19
 On Campus group meeting at Burwood to further plan,to discuss any doubts/questions, 
 to see the progress and identify any issues with the app, to discuss what further features can be added in our app. 
 (2 hours) [Thavin, Rashim]
+
+Week 6, Thursday 11/04/19 [Henry]
+- The function comments are still missing [Henry]
+- We have updated our comments with functions we worked on. [Thavin]
 
 Week 6, Saturday 13/04/19
 Worked on saving data to firebase database so that user can create and save employees to database. 
@@ -56,6 +65,10 @@ Worked with function to allow viewing of saved employees. (4 hours) [Thavin]
 
 Week 6, Monday 15/04/19
 Continued development of function allowing retreival of employee details. (4 hours) [Thavin]
+
+Week 7, Monday 15/04/19 [Henry]
+- Feedback: What's happening with this project? Has this been cancelled? [Henry]
+-The project has not been cancelled apologies for the late push this week. Due to the functions we developed this week it took slightly longer than we expected. [Thavin]
 
 Week 7, Wednesday 17/04/19
 On Campus group meeting at Burwood to discuss tasks left, to discuss any doubts/questions, 
@@ -76,19 +89,3 @@ Week 9, Wednesday 8/May [Henry]
 - There are also two files (.txt and .md). You only need one. Choose which one.
 - Good progress. Glad to see it's getting closer. Final stretch now. 
 - Make sure you go over everything in the Grading Criteria super carefully, to ensure you meet each point.
-
-
-
-
-Week 6, Monday 08/04/19 [Henry]
-- Great to see this progressing.
-- Both of you: function comments. I made a big fuss about this on the unit site last week. [Henry]
--We have been updating our changes in the changelog.txt i have updated this file with the latest information. We will continue to keep both files up to date. [Thavin]
-
-Week 6, Thursday 11/04/19 [Henry]
-- The function comments are still missing [Henry]
-- We have updated our comments with functions we worked on. [Thavin]
-
-Week 7, Monday 15/04/19 [Henry]
-- Feedback: What's happening with this project? Has this been cancelled? [Henry]
--The project has not been cancelled apologies for the late push this week. Due to the functions we developed this week it took slightly longer than we expected. [Thavin]
