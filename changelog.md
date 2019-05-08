@@ -71,6 +71,15 @@ Worked a bit more on how a user can update the details of employees with new det
 Week 8, Sunday 05/05/19
 Finalising development of core functions. Add, edit and delete users. Data can be saved and retreived from the database. (8 hours) [Thavin]
 
+Week 9, Wednesday 8/May [Henry]
+- This file has some entries out of date (see the below ones)
+- There are also two files (.txt and .md). You only need one. Choose which one.
+- Good progress. Glad to see it's getting closer. Final stretch now. 
+- Make sure you go over everything in the Grading Criteria super carefully, to ensure you meet each point.
+
+
+
+
 Week 6, Monday 08/04/19 [Henry]
 - Great to see this progressing.
 - Both of you: function comments. I made a big fuss about this on the unit site last week. [Henry]
