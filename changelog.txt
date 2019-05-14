@@ -100,3 +100,6 @@ Working a bit on styling to make some improvements in the user interface. (5 hou
 
 Week 10, Tuesday 14/05/19
 Did some optimization work and testing. (4 hours) [Rashim]
+
+Week 10, Tuesday 14/05/19
+Worked on styling, futher optimisation and testing (8 hours) [Thavin]

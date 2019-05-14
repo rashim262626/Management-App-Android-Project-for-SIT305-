@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
 import { CardSection } from "./common/CardSection";
 
 class ListItem extends Component {
@@ -10,8 +10,6 @@ class ListItem extends Component {
   }
 
   onRowPress() {
-    //this.props.onPress;
-    //this.props.navigation.navigate("EmployeeEditForm", {employee: this.props.employee});
     this.props.navigation.navigate("EmployeeEditForm");
   }
 
@@ -24,6 +22,10 @@ class ListItem extends Component {
       >
         <CardSection>
           <Text style={styles.employeeNameStyle} >{name}</Text>
+          {/* <Image
+            style={{height: 70, width: 70}}
+            source={require('../images/Arrow.png')} 
+          /> */}
         </CardSection>
       </TouchableOpacity>
     );
