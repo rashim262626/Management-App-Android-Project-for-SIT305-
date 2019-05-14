@@ -89,3 +89,14 @@ Week 9, Wednesday 8/May [Henry]
 - There are also two files (.txt and .md). You only need one. Choose which one.
 - Good progress. Glad to see it's getting closer. Final stretch now. 
 - Make sure you go over everything in the Grading Criteria super carefully, to ensure you meet each point.
+
+Week 9, Thursday 09/05/19
+On Campus group meeting at Burwood to review the app, to discuss any doubts/questions, 
+to identify any issues with the app, to discuss what further we can add in the features and to make sure if we have met all the grading criteria.
+(4 hours) [Rashim, Thavin]
+
+Week 9, Sunday 12/05/19
+Working a bit on styling to make some improvements in the user interface. (5 hours) [Rashim]
+
+Week 10, Tuesday 14/05/19
+Did some optimization work and testing. (4 hours) [Rashim]

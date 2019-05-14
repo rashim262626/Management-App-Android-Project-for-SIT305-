@@ -3,7 +3,7 @@ import {
     View, 
     Text, 
     StyleSheet, 
-    ListView, 
+    ImageBackground, 
     TouchableOpacity,
     FlatList 
 } from 'react-native';
@@ -114,6 +114,10 @@ class Home extends Component {
             </View>
             
             {/* {this.renderEmployees()} */}
+        <ImageBackground
+            source={require('../images/flowers.png')}
+            style={{flex: 1}}
+        >
 
             <View style={styles.employeeContainerStyle}>
               <FlatList
@@ -138,7 +142,8 @@ class Home extends Component {
                     onPress={() => this.onLogoutButtonPress()}
                 />
             </View>
-            
+        </ImageBackground>
+
         </View>
     );
   }

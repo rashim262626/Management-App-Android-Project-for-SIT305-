@@ -74,13 +74,13 @@ class SignUpScreen extends Component {
 
       <View style={styles.componentViewStyle} >
 
-        <Input
+        {/* <Input
           placeholder="User name"
           onChange={(text) => this.setState({username: text})}
           value={this.state.username}
           autoCapitalize = 'none'
           autoCorrect={false}
-        />
+        /> */}
         <Input
           placeholder="Email"
           onChange={(text) => this.setState({email: text})}
@@ -127,7 +127,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   componentViewStyle: {
-    height: 220,
+    height: 170,
     justifyContent: 'space-between',
     marginBottom: 40,
   },

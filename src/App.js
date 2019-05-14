@@ -6,7 +6,6 @@ import SignUpScreen from './screens/SignUpScreen';
 import Home from './screens/Home';
 import EmployeeCreate from './components/EmployeeCreate';
 import EmployeeEditForm from './components/EmployeeEditForm';
-//import ListItem from './components/ListItem';
 
 //Defining navigation containing all screens of app
 const MainNavigator = createStackNavigator({

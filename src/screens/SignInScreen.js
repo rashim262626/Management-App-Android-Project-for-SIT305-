@@ -81,13 +81,13 @@ class SignInScreen extends Component {
 
       <View style={styles.componentViewStyle} >
 
-        <Input
+        {/* <Input
           placeholder="User name"
           onChange={(text) => this.setState({username: text})}
           value={this.state.username}
           autoCapitalize = 'none'
           autoCorrect={false}
-        />
+        /> */}
         <Input
           placeholder="Email"
           onChange={(text) => this.setState({email: text})}
@@ -112,7 +112,7 @@ class SignInScreen extends Component {
           onPress={() => this.props.navigation.navigate('SignUpScreen')}
         >
           <Text style={styles.SignupTextStyle}>
-            Sign Up ?
+            Create an account ?
           </Text>
         </TouchableOpacity>
       </View>
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   componentViewStyle: {
-    height: 220,
+    height: 170,
     justifyContent: 'space-between',
     marginBottom: 40,
   },
