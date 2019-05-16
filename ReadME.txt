@@ -12,6 +12,10 @@ Our (Developers) details are as follow:-
 Rashim Kumar (215282423)
 Thavin (213401504)
 
+Run npm install to update all dependencies
+Run react-native run-android to deploy application on android studio
+You will need to have react-native installed and a guide can be found on their website
+
 API Reference:
 -------------------------------------------------
 Class: SignInScreen
