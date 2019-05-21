@@ -1,3 +1,8 @@
+Image licenses:
+Arrow.png, self created, Rashim Kumar
+flowers.png, self created, Rashim Kumar
+
+
 End User License Agreement 
 
 Read This Agreement Before Using The Software
